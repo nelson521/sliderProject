@@ -13,10 +13,18 @@ const btnRight = document
   .querySelector('.btn-right')
   .addEventListener('click', rightSide);
 
+let count = 0;
+
+const picture = document.querySelector('img');
+
 function leftSide(e) {
-  console.log(e.target);
+  if (e.target.parentElement.classList.contains('btn-left')) {
+    console.log('Left');
+  }
 }
 
 function rightSide(e) {
-  console.log(e.target);
+  if (e.target.parentElement.classList.contains('btn-right')) {
+    console.log('Right');
+  }
 }
